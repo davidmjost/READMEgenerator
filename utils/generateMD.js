@@ -12,3 +12,64 @@ function badge(license) {
         return ""
     };
 };
+
+function createLicenseLink(license) {
+    if (license === "none") {
+        return ""
+
+    }
+    else {
+        return "* [Licenses](#Licenses)"
+    }
+};
+
+function createLicenseSection(license) {
+    if (license === "none") {
+        return ""
+
+    }
+    else {
+        return "# Licenses"
+
+    }
+};
+
+function generateMD(data) {
+
+    return `# ${data.title} 
+
+    ${badge(data.license)}
+
+    # Table of Contents
+    *[Description](#Description)
+    *[Installation](#Installation)
+    *[Usage](#Usage)
+    *[Contribution](#Contribution)
+    *[Testing](#Testing)
+    ${createLicenseLink(data.license)}
+    *[Contact](#Contact)
+
+    # Description
+        ${data.description}
+
+    # Installation
+        ${data.install}
+
+    # Usage
+        ${data.usage}
+
+    # Contributions
+        ${data.contribution}
+        
+    # Testing
+        ${data.test}
+
+    ${createLicenseSection(data.license)}
+
+    # Contact
+        Please email me with any questions. (Mail to: ${data.email})
+        For more examples of my work, please go to (https://github.com/${data.username})
+`;
+};
+
+module.exports = generateMD;
