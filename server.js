@@ -52,8 +52,6 @@ const input = [
 
 ];
 
-function writeFile(fileName, data) { }
-
 function init() {
     inquirer.prompt(input)
         .then((answers) => {
