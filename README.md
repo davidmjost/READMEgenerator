@@ -1,7 +1,7 @@
 # README Generator
 
 Description - 
-A node app that inteded to easily create a comprehensive README file. 
+A node app that is inteded to easily create a comprehensive README file. 
 
 Bugs - 
 
